@@ -1,0 +1,9 @@
+user_id,name,age,signup_date,last_login,country,score,premium,notes,age_numeric,high_score
+1,Anele,29.0,2021-05-14,2025-09-15 08:34:00,South Africa,85.0,True,Loves coding,29.0,True
+2,Bongani,,,,,72.5,False,,,False
+3,Anele,29.0,2021-05-14,,,85.0,True,Duplicate entry,29.0,True
+4,Chanel,22.0,2020-11-02,,Zimbabwe,,False,,22.0,False
+5,Dumisani,31.0,,,South Africa,90.0,True,VIP,31.0,True
+6,Ester,27.0,,,Mozambique,65.0,False, ,27.0,False
+7,Fikile,35.0,,,,88.0,True,,35.0,True
+8,Gugulethu,28.0,2024-07-07,2025-10-06 13:00:00,South Africa,82.0,False,New user,28.0,True
