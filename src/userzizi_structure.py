@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 from typing import TypedDict, NamedTuple
 from dataclasses import dataclass
 from pydantic import BaseModel
 
+=======
+from dataclasses import dataclass
+from typing import NamedTuple, TypedDict
+
+from pydantic import BaseModel
+
+
+>>>>>>> bfa5463 (Added new assignment files and updates)
 # TypedDict
 class UserTypedDict(TypedDict):
     id: int

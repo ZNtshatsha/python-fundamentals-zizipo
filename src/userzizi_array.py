@@ -10,6 +10,10 @@ print("List:", numbers_list)
 print("NumPy Array:", numbers_array)
 from userzizi_timing import measure_time
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> bfa5463 (Added new assignment files and updates)
 @measure_time
 def multiply_with_list(lst, scalar):
     return [x * scalar for x in lst]

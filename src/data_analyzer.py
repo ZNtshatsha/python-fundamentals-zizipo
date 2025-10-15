@@ -1,6 +1,9 @@
 # Only import what is actually used!
 
+<<<<<<< HEAD
 from src.utils import some_function  # or correct name if not `some_function`
+=======
+>>>>>>> bfa5463 (Added new assignment files and updates)
 
 # If you still use pandas or pydantic, keep these; otherwise remove them
 # import pandas as pd
@@ -10,7 +13,11 @@ from src.utils import some_function  # or correct name if not `some_function`
 
 import sys
 
+<<<<<<< HEAD
 from src.utils import some_function  # adjust to your function name
+=======
+
+>>>>>>> bfa5463 (Added new assignment files and updates)
 def greet_user(name: str) -> None:
     print(f"Hello,{name}")  # Use the utils function here
 

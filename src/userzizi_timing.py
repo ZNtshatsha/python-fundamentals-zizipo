@@ -1,5 +1,9 @@
 import time
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> bfa5463 (Added new assignment files and updates)
 def measure_time(func):
     def wrapper(*args, **kwargs):
         start = time.time()

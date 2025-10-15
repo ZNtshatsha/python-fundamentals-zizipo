@@ -1,4 +1,5 @@
 import json
+<<<<<<< HEAD
 
 from typing import Any, Dict, List, Optional
 from pydantic import BaseModel
@@ -9,6 +10,19 @@ class Document(BaseModel): type: ignore
     tags: Optional[List[str]] = []
     published: Optional[bool] = False
     metadata: Dict[str, Any] = {}
+=======
+from typing import Any, Dict, List, Optional
+
+from pydantic import BaseModel
+
+
+class Document(BaseModel):
+ id: int
+title: str
+tags: Optional[List[str]] = []
+published: Optional[bool] = False
+metadata: Dict[str, Any] = {}
+>>>>>>> bfa5463 (Added new assignment files and updates)
 
 def load_documents(path: str) -> List[Document]:
     with open(path, 'r') as f:
