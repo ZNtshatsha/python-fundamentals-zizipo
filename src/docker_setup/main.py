@@ -9,7 +9,7 @@ if not crud.get_all_users(db):  # only insert if no data exists
     crud.create_user(db, 'sinovuyo', 'sinovuyo@gmail.com', 27)
     crud.create_user(db, 'amahle', 'amahle@gmail.com', 29)
     crud.create_user(db, 'ogiyonke', 'ogiyonke@gmail.com', 23)
-    print("✅ Sample users added to the database.")
+    print("Sample users added to the database.")
 
 # 2. Get all users
 print("\nAll users:")
