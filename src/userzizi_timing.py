@@ -1,11 +1,11 @@
 import time
+from typing import Callable, ParamSpec, TypeVar
 
-<<<<<<< HEAD
-=======
+P = ParamSpec("P")
+R = TypeVar("R")
 
->>>>>>> bfa5463 (Added new assignment files and updates)
-def measure_time(func):
-    def wrapper(*args, **kwargs):
+def measure_time(func: Callable[P, R]) -> Callable[P, R]:
+    def wrapper(*args: P.args, **kwargs: P.kwargs) -> R:
         start = time.time()
         result = func(*args, **kwargs)
         end = time.time()

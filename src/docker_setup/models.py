@@ -1,26 +1,12 @@
-from sqlalchemy import Table, Column, Integer, String, MetaData
-from sqlalchemy.orm import declarative_base
+from sqlalchemy import Column, Integer, String
 
-metadata = MetaData()
-Base = declarative_base()
+from .database import Base
 
-# --- Using SQLAlchemy Table (Core)
-users_table = Table(
-    'users',
-    metadata,
-    Column('id', Integer, primary_key=True),
-    Column('username', String(100), unique=True, nullable=False),
-    Column('email', String(100), nullable=False),
-    Column('age', Integer)
-)
 
-# --- Using ORM Model (Declarative)
 class User(Base):
-    __tablename__ = 'users'
-    id = Column(Integer, primary_key=True)
-    username = Column(String(100), unique=True, nullable=False)
-    email = Column(String(100), nullable=False)
-    age = Column(Integer)
-from database import engine
+    __tablename__ = "users"
 
-Base.metadata.create_all(bind=engine)
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String(50), nullable=False)
+    email = Column(String(100), nullable=False, unique=True)
+    age = Column(Integer, nullable=True)

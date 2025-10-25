@@ -1,5 +1,5 @@
-from database import SessionLocal
 import crud
+from database import SessionLocal
 
 db = SessionLocal()
 

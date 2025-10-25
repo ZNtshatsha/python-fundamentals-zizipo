@@ -1,27 +1,14 @@
+
 import numpy as np
 
-# Python list
-numbers_list = [1, 2, 3, 4, 5]
+from src.userzizi_timing import measure_time
 
-# NumPy array
-numbers_array = np.array([1, 2, 3, 4, 5])
 
-print("List:", numbers_list)
-print("NumPy Array:", numbers_array)
-from userzizi_timing import measure_time
-
-<<<<<<< HEAD
-=======
-
->>>>>>> bfa5463 (Added new assignment files and updates)
 @measure_time
-def multiply_with_list(lst, scalar):
+def multiply_with_list(lst: list[int], scalar: int) -> list[int]:
     return [x * scalar for x in lst]
 
-@measure_time
-def multiply_with_numpy(arr, scalar):
-    return arr * scalar
 
-# Run performance comparison
-multiply_with_list(numbers_list, 5)
-multiply_with_numpy(numbers_array, 5)
+@measure_time
+def multiply_with_numpy(arr: np.ndarray, scalar: int) -> np.ndarray:
+    return arr * scalar

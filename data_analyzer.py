@@ -1,40 +1,46 @@
-# data_analyzer.py
-
 import sys
-from utils import greet_user
+from typing import Dict, List
 
-def main():
-    # Command-line argument handling
+from src.utils import greet_user
+
+
+def greet_user_cli(name: str) -> None:
+    """Display a greeting message in the CLI."""
+    print(greet_user(name))
+
+
+def main() -> None:
+    """Main entry point for the Data Analyzer CLI."""
     if len(sys.argv) < 2:
         print("Usage: python data_analyzer.py <username>")
         sys.exit(1)
 
     username = sys.argv[1]
-    print(greet_user(username))
+    greet_user_cli(username)
 
     # Variables
-    name = "DataAnalyzer"
-    version = 1
-    features = ["Variables", "Loops", "Conditionals", "Functions"]
-    config = {"theme": "dark", "autosave": True}
+    name: str = "DataAnalyzer"
+    version: int = 1
+    features: List[str] = ["Variables", "Loops", "Conditionals", "Functions"]
+    config: Dict[str, object] = {"theme": "dark", "autosave": True}
 
     print(f"Program: {name} v{version}")
     print("Features available:", features)
     print("Configuration:", config)
 
     # String to int casting
-    string_number = "42"
-    int_number = int(string_number)
+    string_number: str = "42"
+    int_number: int = int(string_number)
     print(f"String '{string_number}' casted to int is {int_number}")
 
-    # Loop - for
+    # For loop with enumerate
     print("\n--- For loop with enumerate ---")
     for index, feature in enumerate(features):
         print(f"{index + 1}. {feature} (id: {id(feature)})")
 
-    # Loop - while
+    # While loop
     print("\n--- While loop ---")
-    count = 0
+    count: int = 0
     while count < 3:
         print(f"Count is {count}")
         count += 1
@@ -49,13 +55,14 @@ def main():
         print("Updated version")
 
     # Tuple
-    data_tuple = (100, 200, 300)
+    data_tuple: tuple[int, int, int] = (100, 200, 300)
     print("\nTuple:", data_tuple)
 
-    # Dictionary
+    # Dictionary Iteration
     print("\n--- Dictionary Iteration ---")
-    for key in config:
-        print(f"{key} => {config[key]}")
+    for key, value in config.items():
+        print(f"{key} => {value}")
+
 
 if __name__ == "__main__":
     main()

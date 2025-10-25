@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-from typing import Any
+
 name = "Zizipho"
-from typing import Any
-=======
-name = "Zizipho"
->>>>>>> bfa5463 (Added new assignment files and updates)
 
 def some_function(arg1: str, arg2: int) -> str:
     ...
